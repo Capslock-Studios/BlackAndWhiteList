@@ -1201,7 +1201,7 @@ a:focus {
       border-radius: 22px;
       margin: 10px;
       padding: 10px;
-      background-color: orange;
+      background-color: rgb(104, 104, 104);
       color: white;
       display: flex;
       align-items: center;
