@@ -75,9 +75,6 @@
                 <span class="s-3"> </span>
               </button>
             </div>
-            <div class="nav-search search-switch">
-              <i class="fa fa-search"></i>
-          </div>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
                 <a href="index.html">HOME</a>
@@ -239,9 +236,14 @@
                     }
               
                     const searchResults = todoList.filter(item => item.parent.toLowerCase().includes(searchText.toLowerCase()));
-              
+                    
+
                     if (searchResults.length === 0) {
-                      todoListContainer.innerHTML = '<li>No matching persons or entities found.</li> <button type="submit" id="searchButton" disabled onclick="searchTodo()">Beep Search</button>';
+                      todoListContainer.innerHTML = '<li>No matching persons or entities found.</li> <div class="btn-container"><button id="deepSearchButton">Deep Search</button></div>';
+                      document.getElementById("deepSearchButton").addEventListener("click", function() {
+    window.location.href = 'deep-search.html';
+});
+
                     } else {
                       searchResults.forEach((item, index) => {
     const todoItem = document.createElement('div');
