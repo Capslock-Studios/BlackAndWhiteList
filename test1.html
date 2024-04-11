@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <button id="copySelectionBtn">Copy Selection</button>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <form id="form">
+                <label for="urlInput">URL(copied):</label>
+                <input type="text" id="urlInput" name="urlInput" readonly><br>
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" name="nameInput"><br>
+                <label for="emailInput">Email:</label>
+                <input type="email" id="emailInput" name="emailInput"><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
