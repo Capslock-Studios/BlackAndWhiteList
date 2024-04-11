@@ -49,7 +49,15 @@ body {
   color: #000000;
   position: relative;
 }
-
+.start_btn{
+  background-color: #0c0c0c;
+border-radius:12px ;
+color: #f1f1f1;
+justify-content: center;
+margin: 24px;
+width: 80px;
+height: 40px;
+}
 /*header section*/
 .hero_area {
   position: relative;
@@ -368,6 +376,21 @@ a:focus {
   display: flex;
   -webkit-transform: translateY(-300px);
           transform: translateY(-300px);
+}
+
+.flo_container{
+  background-color: #ffffff;
+  position:fixed;
+  max-width: 20%;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 999;
+border: solid 1px #818181;
+left: 50%;
+top: 50%;
+border-radius: 22px;
 }
 
 .book_section .form_container {
@@ -1457,4 +1480,14 @@ a:focus {
 .profile-card-bottom .follow:hover {
   color: var(--white);
   background-color: var(--secondary);
+}
+
+
+
+@media screen and (max-width: 650px) {
+  .flo_container{
+    max-width: 80%;
+    left: 10%;
+    top: 80%;
+  }
 }
