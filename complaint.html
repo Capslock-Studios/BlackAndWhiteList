@@ -13,11 +13,7 @@
   <meta name="author" content="" />
 
   <link rel="shortcut icon" href="New HAIBO logo icon.svg" type="image/x-icon">
-  <link rel="icon" href="favicon.png" type="image/x-icon">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-/>
+  <link rel="icon" href="New HAIBO logo icon.svg" type="image/x-icon">
 
   <title>
    Verify People easily wilth us | Back and White List 
@@ -81,11 +77,11 @@
             <div id="myNav" class="overlay">
               <div class="overlay-content">
                 <a href="index.html">HOME</a>
-                <a href="#">LIST A PERSON</a>
-                <a href="#">LIST A COMPANY</a>
-                <a href="#">BLACK LISTED</a>
-                <a href="#">WHITE LISTED</a>
-                <a href="#">GRAY LISTED</a>
+                <a href="about.html">ABOUT</a>
+                <a href="car.html">BLACK LISTED</a>
+                <a href="car.html">WHITE LISTED</a>
+                <a href="car.html">GRAY LISTED</a>
+                <a href="contact.html">CONATC US</a>
               </div>
             </div>
           </div>
@@ -221,8 +217,8 @@
                 <script>
                   // Define the list of todo items
                   const todoList = [
-                    { parent: 'Siyabonga Ndaba', children: 'Marketing Exc', child4:'W0338311',COMENDATIONS: '111', COMPLAINTS:'4' ,status:'WHITE', avatarURL: 'https://scontent.fjnb1-1.fna.fbcdn.net/v/t39.30808-6/345442685_3590542494508804_811087326214541940_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH_l7STBCUoHe4FzpBoeQsQF5PqALyd6dIXk-oAvJ3p0o4WlAubDdE5KPebVVoTOxjwBBqUxHwJDq5Bu9tpTeAk&_nc_ohc=iPKN6hepejQAb75DaY0&_nc_zt=23&_nc_ht=scontent.fjnb1-1.fna&oh=00_AfAvIbagg9mAKYR73weuos1rNW2QIfcFPVyP4rXrhqfX2w&oe=661C6F73' },
-                    { parent: 'Boniswa Mngomezulu', children: 'Fashion Designer', child4:'W0333411',COMENDATIONS: '221', COMPLAINTS:'0' ,status:'WHITE',avatarURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUyQuiQw9U1nmRAMctkwAWN5Cf_jAntu_8fk06h-FmmA&s' },
+                    { parent: 'Siyabonga Ndaba', children: ['Software Dev', 'DELL i7 369-5417'] , avatarURL: 'https://siyapercy.online/Siyabonga%20Ndaba.jpg' },
+                    { parent: 'Twakae Fitness club-GYm', children: ['Gym', '083 976 5015'],avatarURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPclkY0uXCizZBABCvzani2DXB-uoCrfJD_B8J9zbfWA&s' },
                     { parent: 'Make a logo', children: ['today', 'never'],avatarURL: 'https://siyapercy.online/Siyabonga%20Ndaba.jpg' },
                     { parent: 'Chat online', children: ['today', 'never'],avatarURL: 'https://siyapercy.online/Siyabonga%20Ndaba.jpg' },
                     { parent: 'Meet mom', children: ['today', 'never'],avatarURL: 'https://siyapercy.online/Siyabonga%20Ndaba.jpg' }
@@ -241,76 +237,17 @@
                     const searchResults = todoList.filter(item => item.parent.toLowerCase().includes(searchText.toLowerCase()));
               
                     if (searchResults.length === 0) {
-                      todoListContainer.innerHTML = '<li>No matching persons or entities found.</li> <button type="submit" id="searchButton" disabled onclick="searchTodo()">Beep Search</button>';
+                      todoListContainer.innerHTML = '<li>No matching items found.</li>';
                     } else {
                       searchResults.forEach((item, index) => {
-    const todoItem = document.createElement('div');
-    todoItem.classList.add('profile-card');
-
-    const backdrop = document.createElement('div'); // Changed variable name
-    backdrop.classList.add('backdrop');
-    backdrop.innerHTML = `    `;
-
-    const profilecardTop = document.createElement('div'); // Changed variable name
-    profilecardTop.classList.add('profile-card-top');
-    profilecardTop.innerHTML = `
-        <i class="fa-solid fa-arrow-left-long"></i>
-        <div>
-            <i class="fa-regular fa-heart heart"></i>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-        </div>
-    `;
-
-    const profilecardMiddle = document.createElement('div'); // Changed variable name
-    profilecardMiddle.classList.add('profile-card-middle');
-    profilecardMiddle.innerHTML = `
-        <div class="profile-pic"><img class="avatar" src="${item.avatarURL}" alt="Avatar">
-            <i class="fa-solid fa-circle-check"></i>
-        </div>
-        <h1>${item.parent}</h1>
-        <h2> ${item.children}</h2>
-   
-           
-                <span style=" 
-                color: #9E9E9E;;"
-                >${item.status} LISTED</span>
-           
-        <div class="social-data">
-            
-            <div>
-                <h6>Complaints</h6>
-                <span>${item.COMPLAINTS}</span>
-            </div>
-            <div>
-                <h6>Commend</h6>
-                <span>${item.COMENDATIONS}</span>
-            </div>
-        </div>
-        <div class="social-icons">
-            <div><i class="fab fa-linkedin"></i></div> 
-            <div><i class="fa-brands fa-facebook-f"></i></div>
-            <div><i class="fa-brands fa-twitter"></i></div>
-            <div><i class="fab fa-instagram"></i></div> <!-- Instagram -->
-<div><i class="fab fa-pinterest"></i></div> <!-- Pinterest -->
-
-        </div>
-    `;
-
-    const profilecardBottom = document.createElement('div'); // Changed variable name
-    profilecardBottom.classList.add('profile-card-bottom');
-    profilecardBottom.innerHTML = `
-        <a href="#" class="follow">COMPLAIN</a>
-        <a href="#" class="hire-me">COMMEND</a>
-    `;
-
-    todoItem.appendChild(backdrop);
-    todoItem.appendChild(profilecardTop);
-    todoItem.appendChild(profilecardMiddle);
-    todoItem.appendChild(profilecardBottom);
-
-    todoListContainer.appendChild(todoItem);
-});
-
+                        const todoItem = document.createElement('div');
+                        todoItem.classList.add('todo-item');
+                        todoItem.innerHTML = `
+                        <img class="avatar" src="${item.avatarURL}" alt="Avatar">
+                          <p class="todo-text"> ${item.parent} - ${item.children.join(', ')}</p>
+                        `;
+                        todoListContainer.appendChild(todoItem);
+                      });
                     }
                   }
               
@@ -348,20 +285,8 @@
       <img src="images/book-car.png" alt="">
     </div>
   </section>
-  <!-- end book section -->
 
-    <!-- footer section -->
-    <footer class="container-fluid footer_section">
-      <p>
-        To register a person:<br> <br>
-        1. You don't need to have an account but you will have a WB Number assocated with your ID and Phone number.<br><br>
-        2. Listing a person is not completely free. We charge R147 for a BLACK LIST and WHITE LISTING is free.<br><br>
-        3. You are required to upload proof of the claims in your Compaints. Proof can be a document, voice note, video, screen shot etc.<br><br>
-        4. You can list a person that you are happy about. e.g. Getting good service from a waiter.<br><br>
-        5.if you are black listed you can remove your BLACK LISTING by paying what you owe (if anything is owed)to the person that listed you plus a R1000 admin fee.
-      </p>
-    </footer>
-    <!-- footer section -->
+  <!-- end book section -->
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
@@ -407,18 +332,18 @@
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Witness 2">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Product Name">
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Witness 1">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Bought From/store">
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="School/Work Address">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Store/Seller Name">
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Work Address">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Store/Seller Address">
                 </div>
               </div>
               <div class="d-flex justify-content-center">
